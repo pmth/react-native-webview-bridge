@@ -19,6 +19,7 @@ var ReactNative = require('react-native');
 var invariant = require('invariant');
 var keyMirror = require('keymirror');
 var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
 var resolveAssetSource = require('react-native/Libraries/Image/resolveAssetSource');
 
 var {
@@ -91,7 +92,7 @@ var defaultRenderError = (errorDomain, errorCode, errorDesc) => (
 /**
  * Renders a native WebView.
  */
-var WebViewBridge = React.createClass({
+var WebViewBridge = createReactClass({
   statics: {
     JSNavigationScheme: JSNavigationScheme,
     NavigationType: NavigationType,
